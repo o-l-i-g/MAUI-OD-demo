@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
+             x:Class="ONNXConsolePort.LiveObjectDetectionPage"
+             Title="LiveObjectDetectionPage">
+    <VerticalStackLayout
+        Spacing="5">
+        <Label 
+            Text="Who's that?"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <cv:CameraView x:Name="cameraView" WidthRequest="300" HeightRequest="200"/>
+
+        <Button x:Name="cameraButton" Text="Loading" Clicked="cameraButton_Clicked" />
+
+        <Button x:Name="snapShotButton" Text="Loading" Clicked="snapShotButton_Clicked" />
+
+
+        <GraphicsView 
+            x:Name="ProcessedImage" 
+            HeightRequest="200" WidthRequest="200"/>
+
+
+        <!--
+        <Grid RowDefinitions="*" ColumnDefinitions="*">
+            <Image x:Name="OriginalImage" WidthRequest="300" HeightRequest="200" />
+            <GraphicsView 
+                x:Name="BoundingBoxes" 
+                WidthRequest="300" HeightRequest="200" />
+        </Grid>
+        -->
+        
+        
+    </VerticalStackLayout>
+</ContentPage>
